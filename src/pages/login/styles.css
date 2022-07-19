@@ -199,9 +199,16 @@
     text-decoration: none;
 }
 
-.txt2{
+.text-center li{
     font-size: 14px;
-    color: #6a7dfe;
+    color:  #099410;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+.text-center li Link{
+    font-size: 14px;
+    color:  #099410;
     line-height: 1.5;
     text-decoration: none;
 }

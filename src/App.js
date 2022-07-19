@@ -1,59 +1,18 @@
-import {useState} from 'react';
-import logoIMG from './images/logo.png'
+import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import './styles.css'
+import Login from './pages/login/Login';
+import Cadastro from './pages/cadastro/Cadastro';
 
-function App() {
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
+function App(){
 
-  return (
-    <div className="container">
-      <div className="container-login">
-        <div className="wrap-login">
-          <form className="login-form">
-
-            <span className="login-form-title">Bem vindo</span>
-
-            <span className="login-form-title">
-              <img src={logoIMG} alt="oiii"/>
-            </span>
-
-            <div className="wrap-input">
-              <input 
-                className={email !== "" ? 'has-val input' : 'input'} 
-                type="email"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-              />
-              <span className="focus-input" data-placeholder="Email"></span>
-            </div>
-
-            <div className="wrap-input">
-              <input 
-              className={password !== "" ? 'has-val input' : 'input'} 
-              type="password"
-              value={password}
-              onChange={e => setPassword(e.target.value)}
-              />
-              <span className="focus-input" data-placeholder="Password"></span>
-            </div>
-
-            <div className="container-login-form-btn">
-              <button className="login-form-btn">Login</button>
-            </div>
-
-            <div className="text-center">
-              <span className="txt1">Não possui conta?</span>
-
-              <a className="txt2" href="#">Criar conta.</a>
-            </div>
-
-          </form>
-        </div>
-      </div>
-    </div>
-  );
+    return(
+        <Router>
+            <Routes>
+                <Route path="/" element={<Login />}/>
+                <Route path="/Cadastrar" element={<Cadastro />}/>
+            </Routes>
+        </Router>
+    );
 }
 
 export default App;
