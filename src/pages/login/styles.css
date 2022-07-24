@@ -199,7 +199,7 @@
     text-decoration: none;
 }
 
-.text-center li{
+.txt2 {
     font-size: 14px;
     color:  #099410;
     line-height: 1.5;
@@ -211,4 +211,11 @@
     color:  #099410;
     line-height: 1.5;
     text-decoration: none;
+}
+
+.textButton{
+    background-color: #099410;
+    display: flex;
+    width: 100px;
+    height: 100px;
 }

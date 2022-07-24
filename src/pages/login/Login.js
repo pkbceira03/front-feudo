@@ -4,6 +4,7 @@ import logoIMG from '../../images/logo.png';
 
 import './styles.css'
 
+
 function Login() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -45,9 +46,10 @@ function Login() {
             </div>
 
             <div className="text-center">
+              
               <span className="txt1">Não possui conta?</span>
 
-              <li><Link to="/Cadastrar">Crair conta</Link></li>
+              <li ><Link className='txt2' to="/Cadastrar">Crair conta</Link></li>
             </div>
 
           </form>
